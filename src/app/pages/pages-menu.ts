@@ -32,14 +32,25 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
-    title: 'Partidos',
+    title: 'Seguridad',
+    icon: 'layout-outline',
+    link: '/pages/dashboard',
+    children: [
+      {
+        title: 'Gestionar Usuarios',
+        link: '/pages/usuarios/listar',
+      },
+    ],
+  },
+  {
+    title: 'Resultados',
     icon: 'layout-outline',
     link: '/pages/dashboard',
     children: [
       {
         title: 'Gestionar Partidos',
         link: '/pages/partidos/listar',
-      },
+      },  
     ],
   },
   // {
