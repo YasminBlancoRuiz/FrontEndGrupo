@@ -22,6 +22,11 @@ const routes: Routes = [{
       .then(m => m.PartidosModule),
     },
     {
+      path: 'usuarios',
+      loadChildren: () => import('./usuarios/usuarios.module')
+      .then(m => m.UsuariosModule),
+    },
+    {
       path: 'dashboard',
       component: ECommerceComponent,
     },

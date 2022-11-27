@@ -1,35 +1,47 @@
 <div class="col-lg-12">
     <nb-card>
         <nb-card-header *ngIf="modoCreacion">
-            CREAR PARTIDO
+            CREAR USUARIO
         </nb-card-header>
         <nb-card-header *ngIf="!modoCreacion">
-            ACTUALIZAR PARTIDO
+            ACTUALIZAR USUARIO
         </nb-card-header>
         <nb-card-body>
             <div class="row">
                 <div class="col-3">
-                    <label>Nombre</label>
+                    <label>Seudonimo</label>
                 </div>
             <div class="col-9">
                 <input class="form-control" type="text"
                         [disabled]="!modoCreacion"
-                        [(ngModel)]="elPartido.Nombre">
-                    <p *ngIf="intentoEnvio && elPartido.Nombre==''">Requerido</p>
+                        [(ngModel)]="elUsuario.seudonimo">
+                    <p *ngIf="intentoEnvio && elUsuario.seudonimo==''">Requerido</p>
             </div>
         </div>
         <br>
         <div class="row">
             <div class="col-3">
-                <label>Lema</label>
+                <label>Email</label>
             </div>
         <div class="col-9">
             <input class="form-control" type="text"
-                    [(ngModel)]="elPartido.Lema">
-            <p *ngIf="intentoEnvio && elPartido.Lema==''">Requerido</p>
+                    [(ngModel)]="elUsuario.email">
+            <p *ngIf="intentoEnvio && elUsuario.email==''">Requerido</p>
         </div>
     </div>
     <br>
+    <div class="row">
+        <div class="col-3">
+            <label>Contraseña</label>
+        </div>
+    <div class="col-9">
+        <input class="form-control" type="text"
+                [(ngModel)]="elUsuario.contrasena">
+        <p *ngIf="intentoEnvio && elUsuario.contrasena==''">Requerido</p>
+    </div>
+</div>
+<br>
+
     <div class="row">
         <button *ngIf="modoCreacion"
                 class="btn btn-primary btn-block" (click)="agregar()">
