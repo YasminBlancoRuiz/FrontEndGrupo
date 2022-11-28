@@ -2,34 +2,14 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
-    title: 'Seguridad',
+    title: 'Login',
     icon: 'lock-outline',
-    link: '/pages/dashboard',
-    children: [
-      {
-        title: 'Login',
-        link: '/pages/seguridad/login',
-      },
-      {
-        title: 'Logout',
-        link: '/pages/seguridad/logout',
-      },
-    ],
+    link: '/pages/seguridad/login',
   },
   {
-    title: 'Candidatos',
-    icon: 'layout-outline',
-    link: '/pages/dashboard',
-    children: [
-      {
-        title: 'Login',
-        link: '/pages/seguridad/login',
-      },
-      {
-        title: 'Logout',
-        link: '/pages/seguridad/logout',
-      },
-    ],
+    title: 'Logout',
+    icon: 'lock-outline',
+    link: '/pages/seguridad/logout',
   },
   {
     title: 'Seguridad',
@@ -38,6 +18,18 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Gestionar Usuarios',
+        link: '/pages/usuarios/listar',
+      },
+      {
+        title: 'Gestionar Rol',
+        link: '/pages/usuarios/listar',
+      },
+      {
+        title: 'Gestionar Permiso',
+        link: '/pages/usuarios/listar',
+      },
+      {
+        title: 'Gestionar Permiso Rol',
         link: '/pages/usuarios/listar',
       },
     ],
@@ -49,6 +41,18 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Gestionar Partidos',
+        link: '/pages/partidos/listar',
+      }, 
+      {
+        title: 'Gestionar Candidatos',
+        link: '/pages/partidos/listar',
+      }, 
+      {
+        title: 'Gestionar Mesas',
+        link: '/pages/mesas/listar',
+      }, 
+      {
+        title: 'Gestionar Resultados',
         link: '/pages/partidos/listar',
       },  
     ],
