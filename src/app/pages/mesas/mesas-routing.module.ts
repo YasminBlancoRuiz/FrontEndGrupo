@@ -14,7 +14,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'actualizar/:id_usuario',
+    path: 'actualizar/:id_mesa',
     component: CrearComponent
   },
 ];
@@ -23,4 +23,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class UsuariosRoutingModule { }
+export class MesasRoutingModule { }
